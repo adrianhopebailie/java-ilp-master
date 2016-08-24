@@ -1,0 +1,65 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+group = 'org.interledger'
+version = '0.1.0'
+description = "Interledger Java parent project"
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+    mavenLocal()
+    maven { url "http://repo.maven.apache.org/maven2" }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    
+}
+
+//Maven compatibility task:
+task writePom << {
+    pom {
+        project {
+            packaging 'pom'
+            description project.description                        
+            inceptionYear '2016'  
+            modules {
+                module "java-crypto-conditions"
+                module "java-ilp-core"
+            }
+            properties {
+                "project.build.sourceEncoding" "UTF-8"
+                "maven.compiler.source" "1.6"
+                "maven.compiler.target" "1.6"
+                "checkstyle.config.location" "google_checks.xml"
+            }
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }  
+            developers {
+                developer {
+                    id "mrmx"
+                    name "Manuel Polo"
+                    email "mistermx@gmail.com"
+                }
+            }
+            reporting  {
+                plugins {
+                    plugin {
+                        groupId "org.apache.maven.plugins"
+                        artifactId "maven-checkstyle-plugin"
+                        version "2.17"
+                    }
+                }
+            }
+            
+        }        
+    }.writeTo("pom.xml")
+}

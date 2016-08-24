@@ -1,0 +1,3 @@
+rootProject.name = 'java-ilp-master'
+include ':java-crypto-conditions'
+include ':java-ilp-core'
