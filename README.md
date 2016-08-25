@@ -37,4 +37,4 @@ Any contribution is very much appreciated! [![Join the chat at https://gitter.im
 
 License
 ---------------
-This code is released under the Apache 2.0 License. Please see [LICENSE.txt](LICENSE.txt) for the full text.
+This code is released under the Apache 2.0 License. Please see [LICENSE](LICENSE) for the full text.
