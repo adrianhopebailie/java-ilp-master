@@ -1,4 +1,4 @@
-Java ILP master repository
+Java ILP master repository [![Build Status](https://travis-ci.org/everis-innolab/java-ilp-master.svg?branch=master)](https://travis-ci.org/everis-innolab/java-ilp-master)
 ========================================================
 
 This project serves as an umbrella for all java-related projects, ensuring all quality rules (eg: checkstyle) and common usages applies.
