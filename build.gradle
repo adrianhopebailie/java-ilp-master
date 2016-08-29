@@ -18,6 +18,10 @@ repositories {
 dependencies {    
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.0'
+}
+
 //Maven compatibility task:
 task writePom << {
     pom {
